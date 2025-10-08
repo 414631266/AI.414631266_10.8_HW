@@ -1,0 +1,114 @@
+/* 針對整體頁面 */
+html, body {
+    height:100%; /* 高度 */
+    margin:0; /* 外框距 */
+    padding:0; /* 內框距 */
+    display: flex; /* flex排版 */
+    flex-direction: column; /* 垂直排列（header → main → footer） */
+    font-family: "Noto Sans TC",sans-serif; /* 思源黑體字型 */
+    background-color: rgb(214, 214, 214); /* 背景顏色 */
+    color: rgb(0, 0, 0); /* 字的顏色 */
+}
+
+/* 首頁區塊 */
+header {
+    background-color: rgb(250, 157, 157); /* 粉色背景 */
+    padding: 30px; /* 周圍內距 */
+    text-align: center; /* 內容置中 */
+}
+
+/* 導覽列連結樣式 */
+nav a {
+    margin:0 20px; /* 左右間距 */
+    text-decoration: none; /* 移除底線 */
+    color: rgb(55, 0, 255); /* 藍色文字 */
+}
+
+/* 主內容 */
+main {
+    flex: 1; /* 撐開所有可用空間，讓 footer 貼底 */
+    padding: 30px; /* 四周內距 */
+}
+
+/* 主標題樣式 h1 */
+h1 {
+    color: #222222;   /* 突顯標題 */
+}
+
+/* 圖片樣式 */
+img {
+    display: block; /* 變成區塊元素 */
+    max-width: 100%; /* 圖片不超過容器寬度 */
+    height: auto; /* 高度自動等比例縮放 */
+    margin: 20px auto; /* 垂直間距 + 水平置中 */
+    border-radius: 10px; /* 圓角 */
+}
+
+/* 表單欄位 */
+form input,
+form textarea {
+    width: 100%; /* 滿版寬度 */
+    padding: 10px; /* 內距 */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #be7dfc;  /* 邊框 */
+    border-radius: 5px; /* 圓角邊框 */
+    box-sizing: border-box;  /* 包含 padding 不超出寬度 */
+}
+
+/* 表單按鈕樣式 */
+form button {
+    padding: 10px 20px; /* 上下10px、左右20px 內距 */
+    background-color: #be7dfc; /* 背景 */
+    color: rgb(255, 255, 255); /* 文字 */
+    border: none; /* 移除邊框 */
+    border-radius: 5px; /* 圓角 */
+    cursor: pointer; /* 滑鼠變成小手指 */
+}
+
+/* 頁尾 */
+footer {
+    background-color: rgb(250, 193, 193); /* 背景 */
+    text-align: center;  /* 置中對齊 */
+    padding: 20px; /* 四周內距 */
+}
+
+
+/* 下拉選單 <select> 的樣式設定 */
+form select {
+    width: 100%; /* 滿版寬度，與其他欄位一致 */
+    padding: 10px; /* 內距，讓字不要貼邊 */
+    margin-top: 5px;  /* 與上一個元素的距離 */
+    margin-bottom: 15px; /* 與下一個元素的距離 */
+    border: 1px solid #be7dfc; /* 邊框 */
+    border-radius: 5px;  /* 圓角邊框 */
+    box-sizing: border-box; /* padding 不會讓元素變寬 */
+    background-color: #fff; /* 背景設為白色 */
+}
+
+/* 單選 <radio> 和多選 <checkbox> 的基本樣式 */
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto; /* 不要跟 text 一樣滿版 */
+    margin-right: 5px; /* 和文字（label）之間留一點空隙 */
+    vertical-align: middle; /* 與文字垂直對齊 */
+}
+
+/* 單選與多選標籤的排版美化 */
+form p {
+    margin-top: 15px; /* 與上一區塊間距 */
+    margin-bottom: 5px; /* 與下方選項靠近一點 */
+    font-weight: bold; /* 加粗提示標題 */
+}
+
+/* 所有 label 標籤的統一設定 */
+form label {
+    display: inline-block; /* 讓 label 成為可對齊的區塊 */
+    margin-bottom: 8px; /* 與下一個欄位留空 */
+}
+
+/* 表單整體排版設定（可選）*/
+form {
+    max-width: 600px; /* 表單最大寬度 */
+    margin: 0 auto; /* 水平置中（上下不設限）*/
+}
